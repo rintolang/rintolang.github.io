@@ -5,16 +5,19 @@ body {
   	justify-items: center;
   	justify-content: center;
   	height: 100%;
+  	padding: 20%;
+  	padding-top: 2%;
+  	text-align: center;
 }
 
 h1,img {
-	
 	background: #00AA00;
 	animation-name: fade-normal;
   	animation-duration: 1s;
   	animation-timing-function: ease;
   	animation-delay: 0s;	
 }
+
 
 img{
 	border-radius: 50%;
@@ -26,6 +29,10 @@ p,h2,a {
   	animation-duration: 2s;
   	animation-timing-function: ease;
   	animation-delay: 0s;	
+}
+
+a{
+	color: #00DD00;
 }
 
 @keyframes fade-normal {
