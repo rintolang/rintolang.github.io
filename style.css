@@ -1,21 +1,40 @@
 body {
 	background: #000000;
 	font-family: "monaco", monospace;
-  	display: grid;
-  	justify-items: center;
-  	justify-content: center;
-  	height: 100%;
-  	padding: 20%;
-  	padding-top: 2%;
-  	text-align: center;
+	display: grid;
+	justify-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 20%;
+	padding-top: 2%;
+	text-align: center;
+  transition: background-color 1s;
+}
+
+.lightMode {
+  background-color: #00AA00;  
+}
+
+.lightMode .mainContent{
+  background: none;
+  color: #000000;
+}
+.lightMode a{
+  color: #002200;
+}
+.lightMode h1{
+  background: #000000;
+  color: #00AA00;
 }
 
 h1,img {
 	background: #00AA00;
 	animation-name: fade-normal;
-  	animation-duration: 1s;
-  	animation-timing-function: ease;
-  	animation-delay: 0s;	
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+  transition: color 1s;
+  transition: background 1s;	
 }
 
 
@@ -23,16 +42,18 @@ img {
 	border-radius: 50%;
 }
 
-p,h2,a {
+.mainContent{
 	color: #00AA00;
 	animation-name: fade-delay;
-  	animation-duration: 2s;
-  	animation-timing-function: ease;
-  	animation-delay: 0s;	
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+  transition: color 1s;	
 }
 
 a {
 	color: #00DD00;
+  transition: color 1s;
 }
 
 @keyframes fade-normal {
@@ -55,3 +76,22 @@ a {
     opacity: 1;
   }
 }
+
+.holder {
+  position:  relative; 
+}
+
+.holder img.main {
+  position: absolute;
+}
+
+.main {
+  z-index: 5;
+  transition: opacity 1s ease-in-out;
+}
+
+.toggleSw {
+  opacity: 0;
+}
+
+
